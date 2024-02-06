@@ -1,0 +1,34 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "AWSTestApp_0602"
+  description: "AWSTestApp_0602"
+
+  links:
+    - url: https://github.com/RohanAwasthi/AWSTestApp_0602
+      title: "AWSTestApp_0602"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "AWSTestApp_0602"
+    environmentname: my-python-env-1221
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-AWSTestApp_0602'
+    github.com/project-slug: RohanAwasthi/AWSTestApp_0602
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "ey"
